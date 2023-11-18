@@ -84,7 +84,7 @@ console.log(isPositive(-3));
 function getLast(array) {
   console.log('In the array:', array);
 
-// needs function to loop array and return last item
+// needs function to call array and return last item
 
   let lastItem = array[array.length - 1];
   console.log(lastItem);
@@ -92,14 +92,27 @@ function getLast(array) {
   return lastItem;
 }
 
+getLast(4);
+
 
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
-
+  let findIndex = false;
+  for (let i = 0; i < array.length; i++) {
+    if (value == array[i]) {
+      return true;
+    }
+  }
+  return findIndex;
 }
+
+let array = [0, 1, 2, 3, 4];
+let match = 3;
+let indexVaule = find(match, array);
+console.log("Was item found: ", indexVaule);
 
 // ----------------------
 // Stretch Goals
